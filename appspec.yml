@@ -9,7 +9,7 @@ files:
 
 hooks:
   AfterInstall: # 배포가 끝나면 아래 명령어를 실행
-    - location: scripts/deploy.sh
+    - location: /home/ec2-user/scripts/deploy.sh
       timeout: 60
   # ApplicationStart: # ApplicationStart 단계에서 해당 파일을 실행
     # - location: /home/ec2-user/scripts/deploy.sh
