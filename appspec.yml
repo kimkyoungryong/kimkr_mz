@@ -7,6 +7,14 @@ files:
     destination: /home/ec2-user/  # EC2 내부 배포 할 위치
     overwrite: yes # 덮어쓰기
 
+hooks:
+  AfterInstall: # 배포가 끝나면 아래 명령어를 실행
+    - location: /deploy.sh
+      timeout: 60
+  # ApplicationStart: # ApplicationStart 단계에서 해당 파일을 실행
+    # - location: scripts/deploy.sh
+    #   timeout: 60
+    #   runas: ec2-user
 
 permissions:
   - object: /
